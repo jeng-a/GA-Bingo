@@ -1,0 +1,32 @@
+* {
+  margin: 0px auto;
+  width: 415px;
+}
+
+body {
+  color: gray;
+}
+
+h1 {
+  font: 20px helvetica;
+  text-align: center;
+}
+
+#bingo {
+  position: absolute;
+  border-space: 5px;
+  margin: 0 auto;
+  border-radius: 3px;
+}
+
+td:hover {
+  background-color: blue;
+}
+
+td {
+  height: 100px;
+  width: 100px;
+  background: black;
+  font: 12px helvetica;
+  cursor: pointer;
+}
