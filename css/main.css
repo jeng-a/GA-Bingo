@@ -5,28 +5,38 @@
 
 body {
   color: gray;
+  font-family: helvetica;
 }
 
 h1 {
-  font: 20px helvetica;
+  font-size: 20px;
   text-align: center;
 }
 
 #bingo {
-  position: absolute;
   border-space: 5px;
   margin: 0 auto;
   border-radius: 3px;
-}
-
-td:hover {
-  background-color: blue;
 }
 
 td {
   height: 100px;
   width: 100px;
   background: black;
-  font: 12px helvetica;
+  font-size: 12px;
   cursor: pointer;
+}
+
+td:hover {
+  background-color: blue;
+}
+
+#winMessage {
+  display: none;
+  text-align: center;
+  font-size: 15px;
+}
+
+.selected {
+  background-color: red;
 }
