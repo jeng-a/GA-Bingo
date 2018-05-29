@@ -1,3 +1,8 @@
+var squares = document.querySelectorAll('td');
+squares.forEach((square) => {
+  square.innerText = generate()
+});
+
 function checkForWin() {
     var t = document.getElementById('bingo');
     if ((t.rows[0].cells[0].marker & t.rows[0].cells[1].marker & t.rows[0].cells[2].marker & t.rows[0].cells[3].marker)
@@ -21,6 +26,8 @@ function checkForWin() {
 function youWin() {
   var winMessage = document.getElementById('winMessage');
   winMessage.style.display = "block";
+  var reset = document.getElementById('reset');
+  reset.style.display = "block";
 }
 
 document.getElementById('bingo').addEventListener("click",function(e){
@@ -29,20 +36,31 @@ document.getElementById('bingo').addEventListener("click",function(e){
   checkForWin();
 })
 
-// var words = {
-//   'Lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing', 'elit'
-// }
-
-function getRandom() {
-  return Math.random ();
+function select(e) {
+  e.classList.toggle("selected");
 }
 
-function start() {
+var words = [
+  'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p'
+];
 
+function generate() {
+  var gathing = words[Math.floor(Math.random () * words.length)];
+  remove(words, gathing);
+  console.log(words.length, words);
+  return gathing;
 }
 
-start();
+function remove(array, element) {
+    const index = array.indexOf(element);
 
-// function select(e) {
-//   e.classList.toggle("selected");
+    if (index !== -1) {
+        array.splice(index, 1);
+    }
+}
+
+// function start() {
+//
 // }
+//
+// start();
