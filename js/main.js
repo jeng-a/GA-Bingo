@@ -1,3 +1,26 @@
+var words = [
+  'Party parrot!',
+  'Security stops you at the door',
+  'ICE CREAM!',
+  "Someone can't eat ice cream",
+  'Someone is online shopping',
+  'Someone falls asleep',
+  'Someone is on Facebook',
+  'Someone asks to borrow a laptop charger',
+  'Someone asks to borrow a phone charger',
+  'Someone sneezes',
+  'Someone coughs',
+  'Someone gets KFC during the break',
+  "Tutor uses 'inspect'",
+  'Tutor uses BBC as an example',
+  'Tutor uses Ling Cars as an example',
+  'Tutor uses The Guardian as an example',
+  'EVACUATION?',
+  'CodePen',
+  'Exercise shared through Slack',
+  'Free food in the kitchen',
+];
+
 var squares = document.querySelectorAll('td');
 squares.forEach((square) => {
   square.innerText = generate()
@@ -18,9 +41,6 @@ function checkForWin() {
   ){
 	youWin();
     }
-  //   else {
-	// youLose();
-  //   }
   }
 
 function youWin() {
@@ -40,10 +60,6 @@ function select(e) {
   e.classList.toggle("selected");
 }
 
-var words = [
-  'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p'
-];
-
 function generate() {
   var gathing = words[Math.floor(Math.random () * words.length)];
   remove(words, gathing);
@@ -53,14 +69,9 @@ function generate() {
 
 function remove(array, element) {
     const index = array.indexOf(element);
-
     if (index !== -1) {
         array.splice(index, 1);
     }
 }
 
-// function start() {
-//
-// }
-//
-// start();
+var button = document.getElementById('reset');

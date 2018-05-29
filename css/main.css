@@ -10,6 +10,11 @@ body {
 }
 
 h1 {
+  font-size: 80px;
+  text-align: center;
+}
+
+h2 {
   font-size: 20px;
   text-align: center;
 }
@@ -26,6 +31,7 @@ td {
   background: black;
   font-size: 12px;
   cursor: pointer;
+  color: white;
 }
 
 td:hover {
