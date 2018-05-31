@@ -17,7 +17,7 @@ var words = [
   'Tutor uses Ling Cars as an example',
   'Tutor uses The Guardian as an example',
   'EVACUATION!?',
-  'CodePen',
+  'CodePen exercise',
   'Exercise shared through Slack',
   'Free food in the kitchen',
 ];
